@@ -69,7 +69,7 @@
     </div>
 
     <h3>e) AI Assistant</h3>
-    <p>When you use the AI assistant, the text of your questions and messages is sent to our third-party AI provider (<strong>Groq</strong>) through a secure <strong>Cloudflare</strong> proxy to generate a response. We send only the message and general Islamic-calendar context — <strong>we do not send your personal profile, history, or activity to the AI provider</strong>. Your AI chat history is stored <strong>only on your device</strong>.</p>
+    <p>When you use the AI assistant, the text of your questions and messages is sent to our third-party AI provider (<strong>Groq</strong>) through a secure <strong>Cloudflare</strong> proxy to generate a response. To find the most relevant verses, hadith and duas, your question is also used to search our Islamic-text library held in a third-party vector database (<strong>Qdrant</strong>). We send only the message and general Islamic-calendar context — <strong>we do not send your personal profile, history, or activity to these providers</strong>. Your AI chat history is stored <strong>only on your device</strong>.</p>
 
     <h3>f) Anonymous AI feedback</h3>
     <p>If you rate an AI answer (👍 / 👎), we store the question, the answer, and your rating to improve quality. This feedback is <strong>anonymous</strong> — it is stored with <strong>no user identity</strong> (no name, email, or account ID).</p>
@@ -99,6 +99,7 @@
       <tr><td>Google Sign-In</td><td>Optional sign-in method</td></tr>
       <tr><td>Groq</td><td>AI processing for the assistant and recitation transcription</td></tr>
       <tr><td>Cloudflare</td><td>Secure proxy that routes AI requests</td></tr>
+      <tr><td>Qdrant</td><td>Vector database used to search the Quran, Hadith and Dua texts for the AI assistant's answers</td></tr>
     </table>
     <p>These providers have their own privacy policies governing their handling of data. We do <strong>not</strong> sell your personal information, and the app does <strong>not</strong> display third-party advertising.</p>
 
