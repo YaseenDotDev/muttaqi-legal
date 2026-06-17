@@ -46,12 +46,12 @@
       <tr><th>Data</th><th>Why</th></tr>
       <tr><td>Name</td><td>To personalise the app (e.g. greetings)</td></tr>
       <tr><td>Email address</td><td>To create and secure your account, and for password recovery</td></tr>
-      <tr><td>Password (email sign-up)</td><td>Handled and encrypted entirely by Firebase Authentication — <strong>we never see or store your password</strong></td></tr>
+      <tr><td>Password (email sign-up)</td><td>Handled and encrypted entirely by our third-party authentication provider — <strong>we never see or store your password</strong></td></tr>
     </table>
     <p>If you sign in with <strong>Google</strong>, we receive your name and email address from your Google account. We do <strong>not</strong> collect your Google profile photo.</p>
 
     <h3>b) Information stored in your account (cloud sync)</h3>
-    <p>If you are signed in, the following is stored securely in our database (Google Firebase) so it can sync across your devices:</p>
+    <p>If you are signed in, the following is stored securely in our cloud database so it can sync across your devices:</p>
     <ul>
       <li>Profile: name, email, preferred language, and madhab (school of jurisprudence)</li>
       <li>App settings: prayer-time calculation preferences, notification preferences, theme</li>
@@ -65,11 +65,11 @@
 
     <h3>d) Microphone &amp; audio (Recitation feature)</h3>
     <div class="note">
-      <strong>Important:</strong> When you use the Quran recitation feature, the app records audio <em>only while you actively use that feature</em> and sends the recording to our third-party AI provider (<strong>Groq</strong>, accessed through a secure <strong>Cloudflare</strong> proxy) to transcribe your recitation. The audio is processed to generate the transcription and is not retained by us. We do not record audio in the background.
+      <strong>Important:</strong> When you use the Quran recitation feature, the app records audio <em>only while you actively use that feature</em> and sends the recording to a third-party AI provider (through a secure proxy) to transcribe your recitation. The audio is processed to generate the transcription and is not retained by us. We do not record audio in the background.
     </div>
 
     <h3>e) AI Assistant</h3>
-    <p>When you use the AI assistant, the text of your questions and messages is sent to our third-party AI provider (<strong>Groq</strong>) through a secure <strong>Cloudflare</strong> proxy to generate a response. To find the most relevant verses, hadith and duas, your question is also used to search our Islamic-text library held in a third-party vector database (<strong>Qdrant</strong>). We send only the message and general Islamic-calendar context — <strong>we do not send your personal profile, history, or activity to these providers</strong>. Your AI chat history is stored <strong>only on your device</strong>.</p>
+    <p>When you use the AI assistant, the text of your questions and messages is sent to a third-party AI provider (through a secure proxy) to generate a response. To find the most relevant verses, hadith and duas, your question is also used to search our Islamic-text library held by a third-party search service. We send only the message and general Islamic-calendar context — <strong>we do not send your personal profile, history, or activity to these providers</strong>. Your AI chat history is stored <strong>only on your device</strong>.</p>
 
     <h3>f) Anonymous AI feedback</h3>
     <p>If you rate an AI answer (👍 / 👎), we store the question, the answer, and your rating to improve quality. This feedback is <strong>anonymous</strong> — it is stored with <strong>no user identity</strong> (no name, email, or account ID).</p>
@@ -95,11 +95,9 @@
     <p>We rely on the following service providers, who process data on our behalf:</p>
     <table>
       <tr><th>Provider</th><th>Purpose</th></tr>
-      <tr><td>Google Firebase (Authentication &amp; Firestore)</td><td>Account sign-in and cloud storage of your account data</td></tr>
-      <tr><td>Google Sign-In</td><td>Optional sign-in method</td></tr>
-      <tr><td>Groq</td><td>AI processing for the assistant and recitation transcription</td></tr>
-      <tr><td>Cloudflare</td><td>Secure proxy that routes AI requests</td></tr>
-      <tr><td>Qdrant</td><td>Vector database used to search the Quran, Hadith and Dua texts for the AI assistant's answers</td></tr>
+      <tr><td>Authentication &amp; cloud database provider</td><td>Account sign-in (including optional third-party sign-in) and cloud storage of your account data</td></tr>
+      <tr><td>AI processing provider</td><td>Generating AI assistant responses and transcribing Quran recitation</td></tr>
+      <tr><td>Networking &amp; search providers</td><td>Securely routing requests and searching the Quran, Hadith and Dua texts for the AI assistant's answers</td></tr>
     </table>
     <p>These providers have their own privacy policies governing their handling of data. We do <strong>not</strong> sell your personal information, and the app does <strong>not</strong> display third-party advertising.</p>
 
@@ -124,7 +122,7 @@
     <p>Depending on your location, you may have the right to access, correct, or delete your personal data, and to withdraw consent. To exercise these rights, contact <a href="mailto:muttaqiapp@gmail.com">muttaqiapp@gmail.com</a>.</p>
 
     <h2>9. Security</h2>
-    <p>Data is transmitted over encrypted connections (HTTPS) and stored using industry-standard providers (Google Firebase). While no method of transmission or storage is 100% secure, we take reasonable measures to protect your information.</p>
+    <p>Data is transmitted over encrypted connections (HTTPS) and stored using industry-standard third-party cloud providers. While no method of transmission or storage is 100% secure, we take reasonable measures to protect your information.</p>
 
     <h2>10. Children's privacy</h2>
     <p>Muttaqi is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us personal data, contact us and we will delete it.</p>
